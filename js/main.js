@@ -82,7 +82,7 @@ var showreel = gsap.timeline({
     scrollTrigger: {
         trigger: "#showreel",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 100%",
         end: "top 0%",
         scrub: 2,

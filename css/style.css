@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #f39c51;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  color: #f39c51;
+}
+
+section {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgb(23, 23, 23);
+  padding: 100px 0;
+}
+
+footer p {
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-white {
+  color: white !important;
+  text-shadow: 2px 2px 0px #f39c51;
+}
+
+.text-primary {
+  color: #f39c51 !important;
+  text-shadow: 0 0 0 transparent !important;
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: showFixedNav 0.8s linear;
+}
+
+@keyframes showFixedNav {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+.section-title {
+  color: #f39c51;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  text-decoration: none;
+  position: relative;
+  border: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: inherit;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.471);
+  padding: 0.3rem 2rem;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #f49003, #f4a041, #ffa73b, #f46f03);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
+  animation: ani 8s linear infinite;
+  border: none;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #f39c51, #f48f41, #ffa03b, #f39c51);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+  filter: blur(20px);
+}
+
+.btn:hover {
+  background: linear-gradient(32deg, #f39c51, #f49541, #ff5c3b, #f39c51);
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 3px 4px #474747;
+  height: 60px;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: black;
+  padding: 0 2rem;
+}
+nav #logo h1 {
+  color: #f39c51;
+  font-weight: 900;
+}
+nav #nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+nav #nav ul li a {
+  padding: 0.3rem 1.4rem;
+  transition: 0.4s;
+}
+nav #nav ul li a:hover {
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+#welcome {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top, #1a1a1a, black);
+}
+#welcome #jaffarVideo {
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#welcome #jaffarImg {
+  opacity: 0.1;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+#welcome #content {
+  z-index: 2;
+  text-align: center;
+  max-width: 90vw;
+}
+#welcome #content h1 {
+  font-weight: 800;
+  font-size: 5vw;
+  color: #f39c51;
+  text-shadow: 4px 9px 14px #000000;
+}
+
+#profile p {
+  font-size: 1.7rem;
+  color: rgba(251, 251, 251, 0.8941176471);
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#showreel {
+  background-color: #1e1e1e;
+}
+#showreel .portfolio-row {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#showreel .portfolio-row .portfolio-item {
+  padding: 15px;
+  user-select: none;
+  cursor: default;
+  width: 25%;
+}
+#showreel .portfolio-row .portfolio-item:hover img {
+  opacity: 0.8;
+}
+#showreel .portfolio-row .portfolio-item img {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#showreel .portfolio-row .portfolio-item .btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#showreel .portfolio-row .portfolio-item:hover .btn {
+  display: block;
+}
+
+#expertise .box h2 {
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+#expertise .box .box-item h3 {
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 10px;
+}
+#expertise .box .box-item .skills-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#expertise .box .box-item .skills-box .skill-img {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+}
+#expertise .box .box-item .skills-box .skill-img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+#expertise .right-box {
+  margin-top: 3rem;
+}
+#expertise .right-box h1 {
+  text-align: end;
+  margin-bottom: 2rem;
+}
+#expertise .right-box .services {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+#expertise .right-box .services .service-item {
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 3px;
+}
+#expertise .right-box .services .service-item:hover {
+  color: black;
+  background-color: white;
+}
+
+#connect {
+  overflow: hidden;
+  background-color: #1e1e1e;
+}
+#connect p {
+  font-size: 7vw;
+  color: rgba(251, 251, 251, 0.8941176471);
+  line-height: 190px;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+#connect .mail-link {
+  text-decoration: none;
+  font-style: italic;
+}
+#connect .mail-link:hover {
+  color: #00ddff;
+  text-decoration: line-through;
+}
+#connect .insta-link {
+  text-decoration: none;
+  font-style: italic;
+}
+#connect .insta-link:hover {
+  color: #ff009d;
+  text-decoration: line-through;
+}
+#connect .linkedin-link {
+  text-decoration: none;
+  font-style: italic;
+}
+#connect .linkedin-link:hover {
+  color: #00a6ff;
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=style.css.map */

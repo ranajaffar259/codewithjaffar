@@ -1,0 +1,14 @@
+{
+  "name": "codewithjaffar",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass ./scss/main.scss ./css/style.css --watch"
+  },
+  "author": "jaffar",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.2"
+  }
+}

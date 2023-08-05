@@ -1,0 +1,43 @@
+#connect {
+    overflow: hidden;
+    background-color: #1e1e1e;
+
+    p {
+        font-size: 7vw;
+        color: #fbfbfbe4;
+        line-height: 190px;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    .mail-link {
+        text-decoration: none;
+        font-style: italic;
+
+        &:hover {
+            color: #00ddff;
+            text-decoration: line-through;
+        }
+    }
+
+    .insta-link {
+        text-decoration: none;
+        font-style: italic;
+
+        &:hover {
+            color: #ff009d;
+            text-decoration: line-through;
+        }
+    }
+
+    .linkedin-link {
+        text-decoration: none;
+        font-style: italic;
+
+        &:hover {
+            color: #00a6ff;
+            text-decoration: line-through;
+        }
+    }
+}

@@ -140,7 +140,6 @@ connect.from("#connect p", {
     y: -30,
     stagger: .3,
 })
-<<<<<<< HEAD
 
 
 var services = gsap.timeline({
@@ -166,5 +165,3 @@ services.from("#services .service-item", {
     y: -30,
     stagger: .2,
 })
-=======
->>>>>>> 79eda647a38112d6010271ae153dea74ae95011f

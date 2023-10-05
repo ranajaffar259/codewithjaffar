@@ -41,30 +41,43 @@ nav.fixed {
 
 .container {
     max-width: 1200px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
 
 .btn {
     text-decoration: none;
-    position: relative;
-    border: none;
     display: inline-block;
     font-size: 16px;
-    font-family: inherit;
     color: #fff;
     transition: .2s;
-    padding: .3rem 2rem;
-    line-height: 2em;
-    text-align: center;
+    padding: .4rem 2rem;
     background: $color-primary;
-    background-size: 300%;
     border-radius: 30px;
-    z-index: 1;
     border: none;
 }
 
 .btn:hover {
+    transform: scale(1.03);
+    color: white;
+    background-color: $color-second;
+}
+
+.btn-second {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    transition: .2s;
+    padding: .4rem 2rem;
+    text-align: center;
+    background-color: #4b4b4b00;
+    border-radius: 30px;
+    border: 1px solid $color-primary !important;
+}
+
+.btn-second:hover {
     transform: scale(1.03);
     color: white;
     background-color: $color-second;

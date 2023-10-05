@@ -20,19 +20,21 @@ var welcome = gsap.timeline()
 welcome.from("#nav li,#logo", {
     opacity: 0,
     x: -300,
+    // stagger: .2,
+    duration: .5
+})
+
+welcome.from("#welcome h1,#welcome .btn-slide", {
+    opacity: 0,
+    x: -300,
     stagger: .2
 })
 
-welcome.from("#welcome h1", {
-    opacity: 0,
-    x: -300,
-})
-
 welcome.from("#welcome #jaffarImg", {
-    opacity: 0,
+    opacity: .3,
 })
 
-welcome.to("#welcome h1", {
+welcome.to("#welcome h1,#welcome a", {
     y: 200,
     scrollTrigger: {
         trigger: "#welcome h1",

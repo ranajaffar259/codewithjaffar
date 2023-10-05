@@ -87,7 +87,7 @@ var showreel = gsap.timeline({
         // markers: true,
         start: "top 100%",
         end: "top 0%",
-        scrub: 2,
+        scrub: 1,
     }
 })
 
@@ -99,7 +99,7 @@ showreel.from("#showreel h1", {
 
 showreel.from("#showreel .portfolio-item", {
     opacity: 0,
-    scale: 1.1,
+    scale: 4,
 })
 
 var expertise = gsap.timeline({
@@ -127,8 +127,8 @@ var connect = gsap.timeline({
         trigger: "#connect",
         scroller: "body",
         // markers: true,
-        start: "top 60%",
-        end: "top 100%",
+        start: "top 0%",
+        end: "top -100%",
         scrub: 2,
     }
 })
@@ -136,9 +136,10 @@ var connect = gsap.timeline({
 
 connect.from("#connect p", {
     opacity: 0,
-    scale: 2,
-    y: -30,
+    scale: 10,
+    y: -130,
     stagger: .3,
+    delay:4
 })
 
 
@@ -165,3 +166,31 @@ services.from("#services .service-item", {
     y: -30,
     stagger: .2,
 })
+
+var clients = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#clients",
+        scroller: "body",
+        // markers: true,
+        start: "top 0%",
+        end: "top -200%",
+        scrub: 1,
+        pin: true
+    }
+})
+
+clients.from("#clients h4", {
+    opacity: 0,
+    scale: 1.2,
+    y: -30,
+})
+
+clients.from("#clients .client-item", {
+    opacity: 0,
+    scale: 4,
+    y: -130,
+    duration:1,
+    stagger: .1,
+    transform: "rotate(300deg)",
+})
+

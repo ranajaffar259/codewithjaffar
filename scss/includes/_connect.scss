@@ -3,7 +3,7 @@
     background-color: #1e1e1e;
 
     p {
-        font-size: 7vw;
+        font-size: 5rem;
         color: #fbfbfbe4;
         line-height: 190px;
         margin-bottom: 1rem;
@@ -12,31 +12,41 @@
     }
 
     .mail-link {
-        text-decoration: none;
+        text-decoration: underline;
         font-style: italic;
+        color: #95f1ff;
 
         &:hover {
-            color: #00ddff;
             text-decoration: line-through;
         }
     }
 
     .insta-link {
-        text-decoration: none;
+        text-decoration: underline;
         font-style: italic;
+        color: #ff96d7;
 
         &:hover {
-            color: #ff009d;
             text-decoration: line-through;
         }
     }
 
     .linkedin-link {
-        text-decoration: none;
+        text-decoration: underline;
         font-style: italic;
+        color: #9fdeff;
 
         &:hover {
-            color: #00a6ff;
+            text-decoration: line-through;
+        }
+    }
+
+    .fiverr-link {
+        text-decoration: underline;
+        font-style: italic;
+        color: #7bffc2;
+
+        &:hover {
             text-decoration: line-through;
         }
     }

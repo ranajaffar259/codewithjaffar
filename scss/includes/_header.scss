@@ -1,17 +1,23 @@
 nav {
     display: flex;
     align-items: center;
-    box-shadow: 2px 3px 4px #474747;
-    height: 60px;
+    filter: drop-shadow(10px 10px 33px #9c6e021d);
+    height: 70px;
     justify-content: space-between;
     z-index: 1000;
     background-color: black;
     padding: 0 2rem;
 
     #logo {
+        max-width: 150px;
+        overflow: hidden;
         h1 {
             color: $color-primary;
             font-weight: 900;
+        }
+        img{
+            height: 100%;
+            width: 100%;
         }
     }
 
@@ -22,17 +28,15 @@ nav {
             align-items: center;
 
             li {
-
                 a {
-                    padding: .3rem 1.4rem;
+                    padding: .3rem 1rem;
                     transition: .4s;
-
-                    &:hover {
-                        letter-spacing: 1px;
-                        font-weight: 800;
-                    }
                 }
             }
+        }
+
+        @media screen and (max-width:992px) {
+            display: none;
         }
     }
 }

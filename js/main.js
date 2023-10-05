@@ -82,7 +82,7 @@ var showreel = gsap.timeline({
     scrollTrigger: {
         trigger: "#showreel",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 100%",
         end: "top 0%",
         scrub: 2,
@@ -105,10 +105,9 @@ var expertise = gsap.timeline({
         trigger: "#expertise",
         scroller: "body",
         // markers: true,
-        start: "top 0%",
-        end: "top -300%",
+        start: "top 50%",
+        end: "top 0%",
         scrub: 2,
-        pin: true
     }
 })
 
@@ -138,4 +137,29 @@ connect.from("#connect p", {
     scale: 2,
     y: -30,
     stagger: .3,
+})
+
+
+var services = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#services",
+        scroller: "body",
+        // markers: true,
+        start: "top 100%",
+        end: "top 50%",
+        scrub: 2,
+    }
+})
+
+services.from("#services h1", {
+    opacity: 0,
+    scale: 1.2,
+    y: -30,
+})
+
+services.from("#services .service-item", {
+    opacity: 0,
+    scale: 1.2,
+    y: -30,
+    stagger: .2,
 })

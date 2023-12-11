@@ -8,15 +8,6 @@
 //     overflow: hidden;
 //     background: linear-gradient(to top, #1a1a1a, black);
 
-//     #jaffarVideo {
-//         position: absolute;
-//         top: 0;
-//         opacity: .4;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//     }
-
 //     #jaffarImg {
 //         opacity: .1;
 //         z-index: 1;
@@ -51,6 +42,15 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+
+    #jaffarVideo {
+        position: absolute;
+        top: 0;
+        opacity: .2;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 
     #jaffarImg {
         z-index: 1;

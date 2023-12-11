@@ -1,28 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("navbar");
-
-    function fixNavbarOnScroll() {
-        if (window.pageYOffset >= 1500) {
-            navbar.classList.add("fixed");
-        } else {
-            navbar.classList.remove("fixed");
-        }
-    }
-
-    // Call the fixNavbarOnScroll function on initial load
-    fixNavbarOnScroll();
-
-    // Listen to the scroll event and call the fixNavbarOnScroll function on every scroll
-    window.addEventListener("scroll", fixNavbarOnScroll);
-});
-
 var welcome = gsap.timeline()
+
 welcome.from("#nav li,#logo", {
     opacity: 0,
     x: -300,
-    // stagger: .2,
-    duration: .5
+    stagger: .1,
+    duration: .2
 })
+
+Fancybox.bind("[data-fancybox]", {});
 
 welcome.from("#welcome h1,#welcome .btn-slide", {
     opacity: 0,
@@ -65,18 +50,14 @@ var profile = gsap.timeline({
         trigger: "#profile",
         scroller: "body",
         // markers: true,
-        start: "top 60%",
-        end: "top 40%",
-        scrub: 2,
+        start: "top 100%",
+        end: "top 0%",
     }
 })
 
 profile.from("#profile h1,#profile p", {
     scale: 2,
-    duration: 3,
-    y: -30,
     opacity: 0,
-    stagger: 1,
 })
 
 
@@ -85,9 +66,8 @@ var showreel = gsap.timeline({
         trigger: "#showreel",
         scroller: "body",
         // markers: true,
-        start: "top 100%",
+        start: "top 80%",
         end: "top 0%",
-        scrub: 1,
     }
 })
 
@@ -99,7 +79,7 @@ showreel.from("#showreel h1", {
 
 showreel.from("#showreel .portfolio-item", {
     opacity: 0,
-    scale: 4,
+    scale: 2,
 })
 
 var expertise = gsap.timeline({
@@ -107,9 +87,8 @@ var expertise = gsap.timeline({
         trigger: "#expertise",
         scroller: "body",
         // markers: true,
-        start: "top 50%",
+        start: "top 80%",
         end: "top 0%",
-        scrub: 2,
     }
 })
 
@@ -127,9 +106,8 @@ var connect = gsap.timeline({
         trigger: "#connect",
         scroller: "body",
         // markers: true,
-        start: "top 0%",
-        end: "top -100%",
-        scrub: 2,
+        start: "top 70%",
+        end: "top 0%",
     }
 })
 
@@ -139,7 +117,6 @@ connect.from("#connect p", {
     scale: 10,
     y: -130,
     stagger: .3,
-    delay:4
 })
 
 
@@ -150,7 +127,6 @@ var services = gsap.timeline({
         // markers: true,
         start: "top 100%",
         end: "top 50%",
-        scrub: 2,
     }
 })
 
@@ -172,10 +148,8 @@ var clients = gsap.timeline({
         trigger: "#clients",
         scroller: "body",
         // markers: true,
-        start: "top 0%",
-        end: "top -200%",
-        scrub: 1,
-        pin: true
+        start: "top 90%",
+        end: "top 0%",
     }
 })
 
@@ -187,10 +161,8 @@ clients.from("#clients h4", {
 
 clients.from("#clients .client-item", {
     opacity: 0,
-    scale: 4,
+    scale: 1.2,
     y: -130,
-    duration:1,
     stagger: .1,
-    transform: "rotate(300deg)",
 })
 

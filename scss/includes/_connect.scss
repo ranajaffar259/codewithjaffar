@@ -3,16 +3,15 @@
     background-color: #1e1e1e;
 
     p {
-        font-size: 5rem;
+        font-size: 3.84rem;
         color: hsl(0, 0%, 98%);
-        line-height: 190px;
         margin-bottom: 1rem;
         text-transform: capitalize;
         font-weight: bold;
-        
+        letter-spacing: -1px;
+
         @media screen and (max-width:576px) {
             font-size: 2rem;
-            line-height: 2;
         }
     }
 
@@ -20,10 +19,6 @@
         text-decoration: underline;
         font-style: italic;
         color: #95f1ff;
-
-        &:hover {
-            text-decoration: line-through;
-        }
     }
 
     .insta-link {
@@ -31,9 +26,6 @@
         font-style: italic;
         color: #ff96d7;
 
-        &:hover {
-            text-decoration: line-through;
-        }
     }
 
     .linkedin-link {
@@ -41,18 +33,17 @@
         font-style: italic;
         color: #9fdeff;
 
-        &:hover {
-            text-decoration: line-through;
-        }
     }
 
     .fiverr-link {
         text-decoration: underline;
         font-style: italic;
         color: #7bffc2;
+    }
 
-        &:hover {
-            text-decoration: line-through;
-        }
+    .wa-link {
+        text-decoration: underline;
+        font-style: italic;
+        color: #48ff8eba;
     }
 }

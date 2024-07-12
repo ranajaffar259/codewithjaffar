@@ -1,6 +1,7 @@
 .text-white {
-    color: white !important;
-    text-shadow: 2px 2px 0px $color-primary;
+    color: rgba(255, 255, 255, 0.836) !important;
+    text-shadow: 2px 2px 0px black;
+    letter-spacing: -1px;
 }
 
 .text-primary {
@@ -28,10 +29,8 @@ nav.fixed {
 
 .section-title {
     color: $color-primary;
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
     margin-bottom: 2rem;
 }
 

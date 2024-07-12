@@ -15,9 +15,9 @@ welcome.from("#welcome h1,#welcome .btn-slide", {
     stagger: .2
 })
 
-welcome.from("#welcome #jaffarImg", {
-    opacity: .3,
-})
+// welcome.from("#welcome #jaffarImg", {
+//     opacity: .3,
+// })
 
 welcome.to("#welcome h1,#welcome a", {
     y: 200,
@@ -31,19 +31,19 @@ welcome.to("#welcome h1,#welcome a", {
     }
 })
 
-welcome.to("#welcome #jaffarImg", {
-    scale: 1.1,
-    opacity: .8,
-    scrollTrigger: {
-        trigger: "#welcome",
-        scroller: "body",
-        // markers: true,
-        start: "top 0",
-        end: "top -100%",
-        scrub: 2,
-        pin: true
-    }
-})
+// welcome.to("#welcome #jaffarImg", {
+//     scale: 1.1,
+//     opacity: .8,
+//     scrollTrigger: {
+//         trigger: "#welcome",
+//         scroller: "body",
+//         // markers: true,
+//         start: "top 0",
+//         end: "top -100%",
+//         scrub: 2,
+//         pin: true
+//     }
+// })
 
 var profile = gsap.timeline({
     scrollTrigger: {
@@ -77,7 +77,7 @@ showreel.from("#showreel h1", {
     y: -30,
 })
 
-showreel.from("#showreel .portfolio-item", {
+showreel.from("body #showreel .portfolio-item", {
     opacity: 0,
     scale: 2,
 })
@@ -166,3 +166,56 @@ clients.from("#clients .client-item", {
     stagger: .1,
 })
 
+Shery.mouseFollower({
+    //Parameters are optional.
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+});
+
+Shery.makeMagnet(".shery-magnet" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+});
+
+
+
+// inject portfolio
+const portfolioItems = [
+    { img: './img/works/1.png', caption: 'i2cinc', preview: '' },
+    { img: './img/works/2.png', caption: 'my device specs', preview: 'https://mydevicespecs.online/' },
+    { img: './img/works/3.png', caption: 'mango tech', preview: 'https://ranajaffar259.github.io/mangotech/' },
+    { img: './img/works/4.png', caption: 'gandibuilders', preview: 'https://ranajaffar259.github.io/Gandhi-Builders-or-Developers/' },
+    { img: './img/works/5.png', caption: 'proprice', preview: 'https://ranajaffar259.github.io/pro-price/' },
+    { img: './img/works/6.png', caption: 'evsaaz', preview: 'https://www.evsaaz.com' },
+    { img: './img/works/7.png', caption: 'evsaaz', preview: 'https://www.evsaaz.com' },
+    { img: './img/works/8.png', caption: '', preview: '' },
+    { img: './img/works/9.png', caption: '', preview: '' },
+    { img: './img/works/10.PNG', caption: '', preview: '' },
+    { img: './img/works/11.PNG', caption: '', preview: '' },
+    { img: './img/works/12.png', caption: '', preview: '' },
+    { img: './img/works/15.png', caption: '', preview: '' },
+    { img: './img/works/18.png', caption: '', preview: '' },
+    { img: './img/works/19.png', caption: '', preview: '' },
+    { img: './img/works/16.png', caption: '', preview: '' },
+    { img: './img/works/mbasy/1.png', caption: 'mbasy', preview: '' },
+    { img: './img/works/mbasy/2.png', caption: 'mbasy', preview: '' },
+    { img: './img/works/mbasy/3.png', caption: 'mbasy', preview: '' },
+    { img: './img/works/mbasy/4.png', caption: 'mbasy', preview: '' },
+];
+
+const portfolioRow = document.getElementById('portfolio-row');
+portfolioItems.forEach(item => {
+    const portfolioItem = document.createElement('div');
+    portfolioItem.classList.add('portfolio-item');
+
+    portfolioItem.innerHTML = `
+        <a href="${item.img}" data-fancybox="gallery" data-caption="${item.caption}">
+            <img src="${item.img}" alt="${item.caption}">
+        </a>
+        ${item.preview ? `<a href="${item.preview}" target="_blank" class="btn">Preview</a>` : ''}
+    `;
+
+    portfolioRow.appendChild(portfolioItem);
+});

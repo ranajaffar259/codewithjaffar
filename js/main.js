@@ -199,6 +199,7 @@ const portfolioItems = [
     { img: './img/works/18.png', caption: '', preview: '' },
     { img: './img/works/19.png', caption: '', preview: '' },
     { img: './img/works/16.png', caption: '', preview: '' },
+    { img: './img/works/20.png', caption: 'DevNexion', preview: 'https://ranajaffar259.github.io/devnexion/' },
     { img: './img/works/mbasy/1.png', caption: 'mbasy', preview: '' },
     { img: './img/works/mbasy/2.png', caption: 'mbasy', preview: '' },
     { img: './img/works/mbasy/3.png', caption: 'mbasy', preview: '' },

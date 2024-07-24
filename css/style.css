@@ -364,17 +364,31 @@ nav #nav ul li a:hover {
   background-color: white;
 }
 
+#clients {
+  perspective: 1200px;
+  /* Adjust the perspective as needed */
+}
 #clients .clients-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 576px) {
+  #clients .clients-row {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 #clients .clients-row .client-item {
-  width: 32%;
   padding: 1rem;
-  border: 1px solid white;
-  border-radius: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.372);
+  border-top-right-radius: 40px;
   margin-bottom: 1.7rem;
+  transform-style: preserve-3d;
+  /* Enable 3D transformations for children */
+}
+@media screen and (max-width: 576px) {
+  #clients .clients-row .client-item {
+    padding: 20px 5px;
+  }
 }
 #clients .clients-row .client-item h4 {
   margin-bottom: 5px;
@@ -383,14 +397,19 @@ nav #nav ul li a:hover {
   color: rgba(255, 255, 255, 0.808);
   letter-spacing: -1px;
 }
+@media screen and (max-width: 576px) {
+  #clients .clients-row .client-item h4 {
+    font-size: 1rem;
+  }
+}
 #clients .clients-row .client-item p {
   font-size: 16px;
   line-height: 1.5;
   color: rgba(238, 238, 238, 0.614);
 }
 @media screen and (max-width: 576px) {
-  #clients .clients-row .client-item {
-    width: 100%;
+  #clients .clients-row .client-item p {
+    font-size: 13px;
   }
 }
 #clients .clients-row .client-item .ratingbox {

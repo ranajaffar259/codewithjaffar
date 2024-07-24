@@ -158,13 +158,16 @@ clients.from("#clients h4", {
     scale: 1.2,
     y: -30,
 })
-
-clients.from("#clients .client-item", {
+gsap.from("#clients .client-item", {
     opacity: 0,
     scale: 1.2,
-    y: -130,
-    stagger: .1,
-})
+    rotationY: 90,  // Rotate from 180 degrees to 0 degrees
+    transformOrigin: "top", // Optional, ensures rotation is centered
+    stagger: .2,
+    duration: 1, // Duration of the animation
+    ease: "power2.out" // Smooth easing
+});
+
 
 Shery.mouseFollower({
     //Parameters are optional.
